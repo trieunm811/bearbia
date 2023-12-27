@@ -15,10 +15,10 @@ function Login() {
     axios.defaults.withCredentials = true;
     function HandleSubmit(e){
         e.preventDefault();
-        axios.post(`${process.env.REACT_APP_API}/login`,values)
+        axios.post(`${process.env.REACT_APP_API}/login-admin`,values)
         .then(res => {
             if(res.data.Status === "Đăng nhập thành công"){
-                navigate("/");
+                window.location.reload();
             }else{
                 seterror(res.data.Message)
                 setTimeout(() => window.location.reload(),3000)

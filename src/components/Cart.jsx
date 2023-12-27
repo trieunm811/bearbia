@@ -7,23 +7,6 @@ function Cart() {
   const [auth, setAuth] = useState(false);
   const [items, setitems] = useState(JSON.parse(localStorage.getItem('items')) || [])
   const [qty, setqty] = useState(1);
-  useEffect(() => {
-    const checktoken = async () => {
-      try {
-        const res = await axios.get('http://localhost:8081/auth')
-        if (res.data.Status === "Success") {
-          setAuth(true)
-        }
-        else {
-          setAuth(false)
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    localStorage.setItem("items",JSON.stringify(items))
-    checktoken();
-  }, [items])
   const updateQty = (id, newQty) => {
     const newItems = items.map((item) => {
       if (item.product.Masp === id) {
@@ -43,14 +26,29 @@ function Cart() {
   }
   const total = items
   .reduce((total, item) => total + item.qty * item.product.Gia, 0)
-  .toFixed(3);
+  .toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+  useEffect(() => {
+    const checktoken = async () => {
+        const res = await axios.get(`${process.env.REACT_APP_API}/auth`)
+        if (res.data.Status === "Success") {
+          setAuth(true)
+        }
+        else {
+          setAuth(false)
+        }
+    }
+    localStorage.setItem("items",JSON.stringify(items))
+    checktoken();
+  }, [items])
+  console.log(process.env.REACT_APP_API);
   return (
     auth ?
       <>
         <Header />
+        <p>{process.env.REACT_APP_API}</p>
         <div className="cart-container">
           <div className="cart-showing">
-            <p>Giỏ hàng</p>
+            <p style={{fontSize:"18px", fontWeight:"bold"}}>Giỏ hàng</p>
             <div className="cart-product">
               <div className="cart-menu-product">
                 <p style={{ width: "300px" }}>Sản phẩm</p>
@@ -68,7 +66,8 @@ function Cart() {
           </div>
           <div className="cart-price">
             <p>Tổng tiền</p>
-            <p>Total: {total}</p>
+            <p>Total: {total}đ</p>
+            <button>Thanh toán</button>
           </div>
         </div>
       </>

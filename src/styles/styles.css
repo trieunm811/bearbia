@@ -1,31 +1,36 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #ededed;
     font-family: 'Trebuchet MS', sans-serif;
 }
-.router{
+
+.router {
     text-decoration: none;
     color: white;
 }
-.menu{
+
+.menu {
     background-color: #0072bc;
     width: 100%;
     display: flex;
     top: 0;
 }
-.menu-top{
+
+.menu-top {
     flex-basis: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.menu-top img{
+
+.menu-top img {
     width: 150px;
-    height: 150px; 
-    margin-top: -20px;   
+    height: 150px;
+    margin-top: -20px;
 }
-.menu-middle{
+
+.menu-middle {
     flex-basis: 60%;
     display: flex;
     justify-content: left;
@@ -33,15 +38,19 @@ body{
     gap: 30px;
     font-size: 24px;
 }
-.menu-search{
-    width: 80%;
+.menu-form-search{
+    flex-basis: 80%;
+}
+.menu-search {
+    width: 94%;
     height: 40px;
     padding: 10px 20px;
     border-radius: 10px;
     border: 0;
     font-size: 15px;
 }
-.menu-DanhMuc{
+
+.menu-DanhMuc {
     width: 17%;
     height: 60px;
     padding: 0px 5px;
@@ -52,8 +61,29 @@ body{
     align-items: center;
     gap: 10px;
     font-size: 15px;
+    cursor: pointer;
 }
-.menu-bottom{
+
+.Dropdown {
+    background-color: white;
+    width: 200px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 110px;
+    left: 225px;
+    border-radius: 10px;
+}
+
+.dropdown-item {
+    padding: 1px 0px 1px 15px;
+    border-radius: 10px;
+}
+
+.dropdown-item:hover {
+    background-color: #338ec9;
+}
+
+.menu-bottom {
     flex-basis: 25%;
     display: flex;
     justify-content: center;
@@ -61,24 +91,39 @@ body{
     margin-left: 20px;
     gap: 20px;
 }
-.menu-Cart{
+
+.menu-Cart {
     background-color: #338ec9;
     border: 0;
     width: 40%;
     height: 60px;
     border-radius: 10px;
     color: white;
-    gap: 10px;
+    gap: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 17px;
     cursor: pointer;
+    padding-left: 10px;
 }
-.content-Container{
+.menu-cart-count{
+    position: relative;
+    top: -10px;
+    background-color: red;
+    right: 13px;
+    border-radius: 50%;
+    padding: 3px 5px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-Container {
     width: 100%;
 }
-.content-Banner{
+
+.content-Banner {
     background-color: rgba(255, 255, 255, 0.64);
     display: flex;
     width: 100%;
@@ -86,7 +131,8 @@ body{
     padding-bottom: 20px;
     margin-bottom: 30px;
 }
-.content-Banner-Box{
+
+.content-Banner-Box {
     background-color: #00A9FF;
     display: flex;
     margin-left: 100px;
@@ -96,58 +142,68 @@ body{
     border-radius: 15px;
     color: white;
 }
-.content-Banner-img{
+
+.content-Banner-img {
     flex-basis: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: -70px;
 }
-.content-Banner-img img{
+
+.content-Banner-img img {
     width: 200px;
     height: 200px;
 }
-.content-Banner-contact{
+
+.content-Banner-contact {
     font-size: 23px;
     flex-basis: 60%;
     padding-right: 100px;
     line-height: 35px;
 }
-.content-Banner-contact img{
+
+.content-Banner-contact img {
     width: 50px;
     height: 50px;
     margin-left: 30px;
 }
-.content-box{
+
+.content-box {
     background-color: rgba(255, 255, 255, 0.64);
     padding: 30px;
     text-align: center;
 }
-.content-ListDM{
+
+.content-ListDM {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
-.content-ListDM img{
+
+.content-ListDM img {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     border: 1px solid #0072bc;
 }
-.content-DetailsListDM{
+
+.content-DetailsListDM {
     margin-top: 30px;
     background-color: rgba(255, 255, 255, 0.64);
     padding: 30px 100px;
 }
-.content-boxItem-item{
+
+.content-boxItem-item {
     background-color: white;
     width: 300px;
     border-radius: 20px;
     padding-bottom: 10px;
     box-shadow: 0px 0px 3px 3px rgba(214, 214, 214, 0.258);
 }
-.content-boxItem-img{
+
+.content-boxItem-img {
     background-color: #ecf7ff;
     width: 100%;
     display: flex;
@@ -155,12 +211,14 @@ body{
     align-items: center;
     border-radius: 10px 10px 0 0;
 }
-.content-boxItem-item img{
+
+.content-boxItem-item img {
     width: 300px;
     height: 300px;
     cursor: pointer;
 }
-.content-boxItem-item-Info{
+
+.content-boxItem-item-Info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,7 +226,8 @@ body{
     padding: 20px;
     font-size: 18px;
 }
-.content-boxItem-item-Info button{
+
+.content-boxItem-item-Info button {
     padding: 15px;
     width: 100%;
     border: none;
@@ -177,72 +236,85 @@ body{
     color: white;
     font-size: 15px;
 }
-.content-carousel{
+
+.content-carousel {
     width: 100%;
     margin: 0 0 0 0;
     padding-bottom: 30px;
 }
-.content-carousel-item{
+
+.content-carousel-item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.manage{
+
+.manage {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.manage-form{
+
+.manage-form {
     width: 30%;
     border: 1px solid black;
     border-radius: 10px;
     background-color: #338ec9;
     margin-top: 50px;
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     font-size: 18px;
     color: white;
 }
-.manage-form input{
+
+.manage-form input {
     padding: 7px;
     border-radius: 5px;
     border: none;
 }
-.manage-form textarea{
+
+.manage-form textarea {
     padding: 7px;
     border-radius: 5px;
     border: none;
 }
-.products-navigation{
+
+.products-navigation {
     padding: 30px 100px;
 }
-.products-navigation p{
-    margin: 0 0 0 0 ;
+
+.products-navigation p {
+    margin: 0 0 0 0;
     color: #babfc8;
 }
-.products-title{
+
+.products-title {
     padding: 20px 100px;
     background-color: #f2f6fe;
     font-size: 25px;
     font-weight: bold;
 }
-.products-content{
+
+.products-content {
     padding: 0px 110px;
     background-color: white;
     display: flex;
 }
-.products-List{
+
+.products-List {
     flex-basis: 20%;
     border-right: 1px solid rgb(229, 214, 214);
 }
-.products-List a{
+
+.products-List a {
     text-decoration: none;
     color: black;
 }
-.products-Showing{
+
+.products-Showing {
     flex-basis: 80%;
     display: flex;
     justify-content: center;
@@ -252,17 +324,20 @@ body{
     margin-bottom: 30px;
     margin-top: 30px;
 }
-.products-List-box{
+
+.products-List-box {
     margin: 10px 20px;
     padding: 10px 15px;
     border-radius: 10px;
     font-size: 18px;
 }
-.products-List-box p{
+
+.products-List-box p {
     margin: 0 0 0 0;
-    padding:  0 0 0 0;
+    padding: 0 0 0 0;
 }
-.admin-button{
+
+.admin-button {
     width: 100%;
     padding: 10px;
     background-color: #E0F4FF;
@@ -270,57 +345,78 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-.footer{
+
+.footer {
     color: grey;
     padding: 30px 100px;
     font-size: 18px;
     display: flex;
     justify-content: space-evenly;
 }
-.footer a{
+
+.footer a {
     color: grey;
 }
-.col-2-item{
+
+.col-2-item {
     text-decoration: none;
 }
-.footer-title{
+
+.footer-title {
     display: flex;
     justify-content: space-evenly;
     font-weight: bold;
     padding-right: 50px;
     font-size: 20px;
 }
-.productsdetail-container{
+
+.productsdetail-container {
     width: 100%;
 }
-.productsdetail-showing{
+
+.productsdetail-showing {
     padding: 70px 200px;
     background-color: white;
     display: flex;
     gap: 50px;
 }
-.productsdetail-img{
+
+.productsdetail-img {
     width: 500px;
     height: 450px;
     border: 1px solid black;
     border-radius: 10px;
 }
-.productsdetail-img img{
+
+.productsdetail-img img {
     width: 500px;
     height: 450px;
     border-radius: 10px;
 }
-.productsdetail-info{
-    font-size: 25px;
+
+.productsdetail-info {
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.productsdetail-info p{
+
+.productsdetail-info p {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
-.productsdetail-Soluong{
+
+.productsdetail-Soluong-1 {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.productsdetail-Soluong {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -329,68 +425,96 @@ body{
     border-radius: 10px;
     padding: 0px 10px;
 }
-.productsdetail-Soluong p{
+
+.productsdetail-Soluong p {
     font-weight: bold;
 }
-.productsdetail-introduce{
-    height: 100%;
+
+.productsdetail-introduce {
+    width: 400px;
+    height: 215px;
     border: 1px solid black;
-    border-radius: 10px;
     padding: 10px;
+    line-height: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-.productsdetail-btnThem{
+
+.productsdetail-btnThem {
     padding: 10px;
+    width: 420px;
     border-radius: 5px;
     border: none;
     background-color: #338ec9;
     color: white;
     font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
 }
-.cart-container{
+
+.cart-container {
     margin: 0 100px;
     padding-top: 30px;
     display: flex;
     gap: 30px;
     color: black;
 }
-.cart-showing{
+
+.cart-showing {
     background-color: white;
     padding: 0 30px;
     flex-basis: 70%;
     border-radius: 5px;
 }
-.cart-price{
+
+.cart-price {
     padding: 0 30px;
     background-color: white;
     flex-basis: 30%;
     border-radius: 5px;
+    height: 150px;
 }
-.cart-product{
+
+.cart-price button {
+    padding: 13px 0px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #00A9FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.cart-product {
     display: flex;
     flex-direction: column;
 }
-.cart-product hr{
+
+.cart-product hr {
     width: 100%;
 }
-.cart-menu-product{
+
+.cart-menu-product {
     display: flex;
     align-items: center;
     gap: 80px;
 
 }
-.cart-menu-product img{
+
+.cart-menu-product img {
     width: 100px;
     height: 100px;
 }
-.login-container{
+
+.login-container {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.login-form{
+
+.login-form {
     width: 250px;
     height: 400px;
     padding: 20px;
@@ -402,14 +526,16 @@ body{
     background-color: #338ec9;
     font-size: 15px;
 }
-.login-form input{
+
+.login-form input {
     padding: 8px;
     background-color: white;
     color: black;
     border: none;
     border-radius: 5px;
 }
-.login-form button{
+
+.login-form button {
     margin-top: 20px;
     padding: 10px;
     background-color: white;
@@ -418,3 +544,107 @@ body{
     border-radius: 5px;
 }
 
+.admin-container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+
+}
+
+.admin-left {
+    flex-basis: 15%;
+    height: 100%;
+    background-color: #00A9FF;
+    padding: 10px;
+    position: fixed;
+}
+
+.admin-right {
+    flex-basis: 87%;
+    width: 100%;
+    margin-left: 209px;
+}
+
+.brand-admin {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.brand-admin img {
+    width: 100px;
+    height: 100px;
+}
+
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+
+.admin-menu p {
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 8px;
+    background-color: white;
+    color: #00A9FF;
+}
+
+.admin-box-right {
+    width: 100%;
+}
+
+.admin-box-right-title {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-box-right-title button {
+    margin-right: 30px;
+    border-radius: 10px;
+    background-color: #00A9FF;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.admin-box-right-title p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.admin-box-right-showsp {
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    
+}
+.admin-box-right-showsp-infor{
+    display: flex;
+    margin-left: 30px;
+    padding-top: 20px;
+    gap: 50px;
+}
+
+.admin-box-right-showsp-infor img{
+    width: 100px;
+    height: 100px;
+}
+.search-container{
+    display: flex;
+    gap: 50px;
+    padding: 30px 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: centerx ;
+}

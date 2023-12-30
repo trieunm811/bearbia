@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+Hướng dẫn cài đặt:
+Bước 1: Tải và cài đặt môi trường Node.js(Phiên bản Recommended for Most User)
+https://nodejs.org/en
+Bước 2: Cài đặt bộ cài tự động app React
+ - mở cmd tại thư mục bất kỳ gõ lệnh: npm install -g create-react-app
+Bước 3: Tiến hành tạo React project trong ổ đĩa, folder bạn muốn tạo.
+ - trỏ tới ổ đĩa, folder muốn tạo trong cmd rồi gõ lệnh: create-react-app X với X là tên của project tùy ý bạn.(nếu bạn không thực hiện bước 2 thì tại bước 3 bạn có thể làm y chang cho tới phần gõ lệnh thì là: npx/npm create-react-app X).
+Bước 4: Chạy thử Project với câu lệnh: npm start.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hướng dẫn sử dụng react project bearbia:
+Bước 1: Cài đặt những package có trong project với câu lệnh sau:
+- npm i express body-parser cors mysql jsonwebtoken cookie-parser path react-multi-carousel react-router-dom axios buffer.
+giải thích các package: 
+1. Express: Express là một web application framework for nodejs, nó cung cấp cho chúng những rất nhiều tính năng mạnh mẽ trên nền tảng web. Express rất dễ dàng để phát triển các ứng dụng nhanh dựa trên Node.js cho các ứng dụng Web. Express hỗ trợ các phương thức HTTP và middleware tạo ra 1 API rất mạnh mẽ và sử dụng dễ dàng hơn
+2. body-parser: Đây là phần mềm trung gian node.js để xử lý dữ liệu biểu mẫu được mã hóa JSON, Raw, Text và URL.
+3. cors: nghĩa là chia sẻ tài nguyên chéo nhau, hơi khó hiểu 1 tí nhưng dễ hiểu hơn thì nó là việc bạn chia sẻ tài nguyên của các domain khác nhau cho nhau, hay đơn giản hơn là khi việc client gọi 1 api từ 1 nguồn khác có domain khác với trang hiện tại (nguồn gốc) chính là cors.
+4. mysql: dùng để kết nối tới mysql và thức hiện các tương tác với database.
+5. jsonwebtoken: JSON Web Token (JWT) là một chuẩn mở (RFC 7519) định nghĩa một cách nhỏ gọn và khép kín để truyền một cách an toàn thông tin giữa các bên dưới dạng đối tượng JSON. Thông tin này có thể được xác minh và đáng tin cậy vì nó có chứa chữ ký số. JWTs có thể được ký bằng một thuật toán bí mật (với thuật toán HMAC) hoặc một public / private key sử dụng mã hoá RSA.
+6. cookie-parser: là một thằng trung gian hay gọi là middleware trong Expressjs được sử dụng để phân tích cú pháp cookie và cũng là một phần mềm trung gian phổ biến khi những lập trình viên khởi tạo dự án sử dụng nodejs và expressjs.
+7. react-multi-carousel: hỗ trợ làm giao diện.
+8. react-router-dom: một API cho các ứng dụng React. React router sử dụng định tuyến động phía máy khách cho phép xây dựng SPA (Single Page Application) với điều hướng mà không cần làm mới trang. Đây là một cách ngày càng phổ biến để mang lại trải nghiệm tốt hơn cho người dùng.
+9. axios: thư viện giúp client tương tác với server thông qua giao thức HTTP dựa trên các Promises.
+Bước 2: tiến hành chạy project với lệnh npm start và npm run server để chạy Nodejs.
+Bước 3: Trải nghiệm Web bán hàng y tế, thực phẩm chức năng. Hiện chưa có chức năng thanh toán( sẽ phát triển về sau)!
